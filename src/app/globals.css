@@ -7,3 +7,122 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ── HERO ENTRANCE STAGGER ───────────────────────────────── */
+
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroSceneIn {
+  from { opacity: 0; transform: scale(0.92) translateX(20px); }
+  to   { opacity: 1; transform: scale(1) translateX(0); }
+}
+
+.hero-s1 { animation: heroSlideIn 0.7s ease-out 0.05s both; }
+.hero-s2 { animation: heroSlideIn 0.7s ease-out 0.22s both; }
+.hero-s3 { animation: heroSlideIn 0.7s ease-out 0.40s both; }
+.hero-s4 { animation: heroSlideIn 0.7s ease-out 0.58s both; }
+.hero-s5 { animation: heroSlideIn 0.7s ease-out 0.76s both; }
+.hero-scene { animation: heroSceneIn 1s ease-out 0.35s both; }
+
+/* ── MORPHING BLOB BACKGROUNDS ───────────────────────────── */
+
+@keyframes morphBlob1 {
+  0%,100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(0,0) scale(1); }
+  33%     { border-radius: 40% 60% 55% 45% / 50% 65% 35% 55%; transform: translate(15px,-12px) scale(1.04); }
+  66%     { border-radius: 55% 45% 65% 35% / 40% 55% 45% 60%; transform: translate(-10px,8px) scale(0.97); }
+}
+@keyframes morphBlob2 {
+  0%,100% { border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%; transform: translate(0,0) scale(1); }
+  40%     { border-radius: 65% 35% 40% 60% / 60% 50% 40% 60%; transform: translate(-12px,10px) scale(1.06); }
+  70%     { border-radius: 35% 65% 55% 45% / 35% 60% 40% 55%; transform: translate(8px,-6px) scale(0.96); }
+}
+
+/* ── MARQUEE ─────────────────────────────────────────────── */
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+/* ── SCROLL REVEAL ───────────────────────────────────────── */
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── 3D SCENE ANIMATIONS ─────────────────────────────────── */
+
+@keyframes bodyFloat {
+  0%, 100% {
+    transform: perspective(1000px) rotateY(-12deg) rotateX(5deg) translateY(0px);
+  }
+  33% {
+    transform: perspective(1000px) rotateY(12deg) rotateX(-5deg) translateY(-20px);
+  }
+  66% {
+    transform: perspective(1000px) rotateY(4deg) rotateX(5deg) translateY(-10px);
+  }
+}
+
+@keyframes spinePulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 2px rgba(14, 165, 233, 0.45));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 9px rgba(14, 165, 233, 1));
+  }
+}
+
+@keyframes jointGlow {
+  0%, 100% { opacity: 0.65; }
+  50%       { opacity: 1; }
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(0.9); opacity: 0.55; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.75;
+  }
+  55% { opacity: 0.45; }
+  100% {
+    transform: translateY(-115px) translateX(var(--drift, 12px)) scale(0.35);
+    opacity: 0;
+  }
+}
+
+@keyframes scanLine {
+  0%   { top: 0%;   opacity: 0; }
+  6%   { opacity: 0.55; }
+  94%  { opacity: 0.55; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ── 3D CARD HOVER ───────────────────────────────────────── */
+
+.card-3d {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s ease;
+}
+.card-3d:hover {
+  transform: perspective(800px) rotateX(-6deg) translateY(-8px);
+  box-shadow: 0 24px 48px rgba(14, 165, 233, 0.18);
+}
