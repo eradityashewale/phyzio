@@ -40,7 +40,7 @@ export default function ContactPage() {
             <div className="space-y-5">
               {info.map((item, i) => (
                 <Reveal key={item.label} delay={i * 80}
-                  className="card-3d flex items-start gap-4 bg-sky-50 rounded-2xl p-4">
+                  className="card-3d flex items-start gap-4 bg-olive-50 rounded-2xl p-4">
                   <span className="text-2xl">{item.icon}</span>
                   <div>
                     <p className="text-xs font-semibold text-primary uppercase tracking-wider">{item.label}</p>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                 </Reveal>
               ))}
             </div>
-            <div className="mt-8 rounded-2xl overflow-hidden border border-sky-200 h-52">
+            <div className="mt-8 rounded-2xl overflow-hidden border border-olive-200 h-52">
               <iframe
                 src="https://maps.google.com/maps?q=HGC5%2BV2C,+Camp,+Malegaon,+Maharashtra+423105&output=embed"
                 width="100%"

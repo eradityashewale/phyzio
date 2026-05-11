@@ -24,12 +24,12 @@ export default function PhysioScene3D() {
   return (
     <div
       className="relative w-full h-full flex items-center justify-center rounded-3xl overflow-hidden
-                 bg-gradient-to-br from-sky-50 via-white to-teal-50 shadow-xl"
+                 bg-gradient-to-br from-olive-50 via-white to-amber-50 shadow-xl"
       style={{ perspective: "1200px" }}
     >
       {/* Ambient glows */}
-      <div className="absolute w-64 h-64 rounded-full bg-sky-200/30 blur-3xl -translate-x-10" />
-      <div className="absolute w-48 h-48 rounded-full bg-teal-200/25 blur-2xl translate-x-16 translate-y-10" />
+      <div className="absolute w-64 h-64 rounded-full bg-olive-200/30 blur-3xl -translate-x-10" />
+      <div className="absolute w-48 h-48 rounded-full bg-amber-200/25 blur-2xl translate-x-16 translate-y-10" />
 
       {/* 3D rotating anatomical figure */}
       <div
@@ -52,60 +52,60 @@ export default function PhysioScene3D() {
 
           {/* HEAD */}
           <circle cx="100" cy="24" r="23"
-            fill="none" stroke="#0ea5e9" strokeWidth="2.5"
+            fill="none" stroke="#8B8235" strokeWidth="2.5"
             filter="url(#physio-glow)" />
 
           {/* NECK */}
           <path d="M 94,47 L 94,68 L 106,68 L 106,47"
-            fill="none" stroke="#0ea5e9" strokeWidth="1.8"
+            fill="none" stroke="#8B8235" strokeWidth="1.8"
             strokeLinecap="round" opacity="0.75" />
 
           {/* SHOULDER LINE */}
           <path d="M 55,84 Q 100,73 145,84"
-            fill="none" stroke="#0ea5e9" strokeWidth="2.5"
+            fill="none" stroke="#8B8235" strokeWidth="2.5"
             strokeLinecap="round" filter="url(#physio-glow)" opacity="0.95" />
 
           {/* ARMS */}
           <path d="M 55,84 L 38,148 L 33,197"
-            fill="none" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" opacity="0.72" />
+            fill="none" stroke="#8B8235" strokeWidth="2" strokeLinecap="round" opacity="0.72" />
           <path d="M 145,84 L 162,148 L 167,197"
-            fill="none" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" opacity="0.72" />
+            fill="none" stroke="#8B8235" strokeWidth="2" strokeLinecap="round" opacity="0.72" />
 
           {/* TORSO SIDES */}
           <path d="M 55,84 Q 44,132 48,170 Q 52,198 68,218"
-            fill="none" stroke="#0ea5e9" strokeWidth="1.5" opacity="0.4" />
+            fill="none" stroke="#8B8235" strokeWidth="1.5" opacity="0.4" />
           <path d="M 145,84 Q 156,132 152,170 Q 148,198 132,218"
-            fill="none" stroke="#0ea5e9" strokeWidth="1.5" opacity="0.4" />
+            fill="none" stroke="#8B8235" strokeWidth="1.5" opacity="0.4" />
 
           {/* RIBCAGE outline */}
           <ellipse cx="100" cy="130" rx="42" ry="54"
-            fill="none" stroke="#0ea5e9" strokeWidth="1.2" opacity="0.2" />
+            fill="none" stroke="#8B8235" strokeWidth="1.2" opacity="0.2" />
           {/* Rib lines */}
           {[105, 116, 127, 138, 149].map((y, i) => (
             <path key={i} d={`M 60,${y} Q 100,${y - 6} 140,${y}`}
-              fill="none" stroke="#0ea5e9" strokeWidth="0.9" opacity="0.18" />
+              fill="none" stroke="#8B8235" strokeWidth="0.9" opacity="0.18" />
           ))}
 
           {/* PELVIS */}
           <path d="M 68,218 Q 100,208 132,218 Q 150,240 128,254 L 100,258 L 72,254 Q 50,240 68,218 Z"
-            fill="none" stroke="#0ea5e9" strokeWidth="2" opacity="0.8" />
+            fill="none" stroke="#8B8235" strokeWidth="2" opacity="0.8" />
 
           {/* LEGS */}
           <path d="M 82,258 L 76,308 L 74,362"
-            fill="none" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" opacity="0.78" />
+            fill="none" stroke="#8B8235" strokeWidth="2" strokeLinecap="round" opacity="0.78" />
           <path d="M 118,258 L 124,308 L 126,362"
-            fill="none" stroke="#0ea5e9" strokeWidth="2" strokeLinecap="round" opacity="0.78" />
+            fill="none" stroke="#8B8235" strokeWidth="2" strokeLinecap="round" opacity="0.78" />
 
           {/* ANKLES */}
           <ellipse cx="74" cy="363" rx="8" ry="4.5"
-            fill="none" stroke="#0ea5e9" strokeWidth="1.5" opacity="0.6" />
+            fill="none" stroke="#8B8235" strokeWidth="1.5" opacity="0.6" />
           <ellipse cx="126" cy="363" rx="8" ry="4.5"
-            fill="none" stroke="#0ea5e9" strokeWidth="1.5" opacity="0.6" />
+            fill="none" stroke="#8B8235" strokeWidth="1.5" opacity="0.6" />
 
           {/* SPINE VERTEBRAE (animated glow cascade) */}
           {VERTEBRAE_Y.map((y, i) => (
             <rect key={i} x="93" y={y} width="14" height="10" rx="2.5"
-              fill="#0ea5e9"
+              fill="#8B8235"
               filter="url(#physio-glow)"
               style={{
                 animation: `spinePulse ${2.4 + (i % 4) * 0.35}s ease-in-out infinite`,
@@ -118,7 +118,7 @@ export default function PhysioScene3D() {
           {JOINTS.map((j, i) => (
             <g key={i}>
               <circle cx={j.cx} cy={j.cy} r={j.r + 5}
-                fill="none" stroke="#7dd3fc" strokeWidth="1.5"
+                fill="none" stroke="#c4b44a" strokeWidth="1.5"
                 style={{
                   animation: "pulseRing 2.5s ease-in-out infinite",
                   animationDelay: j.delay,
@@ -126,14 +126,14 @@ export default function PhysioScene3D() {
                 }}
               />
               <circle cx={j.cx} cy={j.cy} r={j.r}
-                fill="none" stroke="#0ea5e9" strokeWidth="2.5"
+                fill="none" stroke="#8B8235" strokeWidth="2.5"
                 filter="url(#physio-glow)"
                 style={{
                   animation: "jointGlow 2.5s ease-in-out infinite",
                   animationDelay: j.delay,
                 }}
               />
-              <circle cx={j.cx} cy={j.cy} r={2.5} fill="#38bdf8" opacity="0.95" />
+              <circle cx={j.cx} cy={j.cy} r={2.5} fill="#b5aa3e" opacity="0.95" />
             </g>
           ))}
         </svg>
@@ -142,7 +142,7 @@ export default function PhysioScene3D() {
       {/* FLOATING HEALING PARTICLES */}
       {PARTICLES.map((p, i) => (
         <div key={i}
-          className="absolute rounded-full bg-sky-400/50"
+          className="absolute rounded-full bg-amber-400/50"
           style={{
             width: `${p.size}px`,
             height: `${p.size}px`,
@@ -157,12 +157,12 @@ export default function PhysioScene3D() {
 
       {/* SCAN LINE */}
       <div className="absolute inset-0 pointer-events-none rounded-3xl overflow-hidden">
-        <div className="absolute w-full h-px bg-sky-400/35 blur-sm"
+        <div className="absolute w-full h-px bg-amber-400/35 blur-sm"
           style={{ animation: "scanLine 5s linear infinite" }} />
       </div>
 
       {/* HUD LABEL */}
-      <div className="absolute top-3 right-4 text-xs text-sky-500 font-mono opacity-50 select-none">
+      <div className="absolute top-3 right-4 text-xs text-olive-500 font-mono opacity-50 select-none">
         <span className="animate-pulse">●&thinsp;</span>PHYSIO
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import PhysioScene3D from "@/components/PhysioScene3D";
 import MarqueeBand from "@/components/MarqueeBand";
 import Reveal from "@/components/Reveal";
@@ -22,16 +23,16 @@ export default function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative bg-gradient-to-br from-sky-50 to-teal-50 py-20 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-olive-50 to-amber-50 py-20 px-4 overflow-hidden">
 
         {/* Morphing background blobs */}
         <div className="pointer-events-none absolute inset-0">
           <div
-            className="absolute -top-20 -left-20 w-[420px] h-[420px] bg-sky-200/35 blur-3xl"
+            className="absolute -top-20 -left-20 w-[420px] h-[420px] bg-olive-200/35 blur-3xl"
             style={{ animation: "morphBlob1 10s ease-in-out infinite" }}
           />
           <div
-            className="absolute -bottom-16 -right-16 w-[380px] h-[380px] bg-teal-200/30 blur-3xl"
+            className="absolute -bottom-16 -right-16 w-[380px] h-[380px] bg-amber-200/30 blur-3xl"
             style={{ animation: "morphBlob2 12s ease-in-out infinite" }}
           />
         </div>
@@ -40,7 +41,17 @@ export default function HomePage() {
 
           {/* Text column — staggered entrance */}
           <div className="flex-1">
-            <span className="hero-s1 inline-block bg-sky-100 text-sky-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+            <div className="hero-s1 mb-6">
+              <Image
+                src="/logo.png"
+                alt="Phoenix | The Physiotherapy Clinic"
+                width={220}
+                height={88}
+                className="h-20 w-auto object-contain"
+                priority
+              />
+            </div>
+            <span className="hero-s1 inline-block bg-olive-100 text-olive-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
               Phoenix | The Physiotherapy Clinic
             </span>
             <h1 className="hero-s2 text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
@@ -61,7 +72,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/services"
-                className="border border-primary text-primary font-semibold px-8 py-3 rounded-full hover:bg-sky-50 transition-colors"
+                className="border border-primary text-primary font-semibold px-8 py-3 rounded-full hover:bg-olive-50 transition-colors"
               >
                 View Services
               </Link>
@@ -83,7 +94,7 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((h, i) => (
-            <Reveal key={h.label} delay={i * 100} className="card-3d bg-sky-50 rounded-2xl p-6 text-center">
+            <Reveal key={h.label} delay={i * 100} className="card-3d bg-olive-50 rounded-2xl p-6 text-center">
               <div className="text-4xl mb-3">{h.icon}</div>
               <h3 className="text-2xl font-bold text-primary mb-1">
                 <AnimatedCounter to={h.count} suffix={h.countSuffix} />
@@ -128,9 +139,9 @@ export default function HomePage() {
           {[
             { icon: "😊", title: "2,500+ Smiles Restored",  body: "Proven results across complex orthopedic and neurological cases." },
             { icon: "🔬", title: "Modern Modalities",        body: "Access to the latest recovery technology like Shockwave and Laser therapy." },
-            { icon: "🌿", title: "Holistic Approach",        body: "We don’t just treat the pain; we treat the person." },
+            { icon: "🌿", title: "Holistic Approach",        body: "We don't just treat the pain; we treat the person." },
           ].map((c, i) => (
-            <Reveal key={c.title} delay={i * 120} className="card-3d border border-sky-100 rounded-2xl p-8 text-center">
+            <Reveal key={c.title} delay={i * 120} className="card-3d border border-olive-100 rounded-2xl p-8 text-center">
               <div className="text-4xl mb-4">{c.icon}</div>
               <h3 className="font-semibold text-gray-800 mb-2">{c.title}</h3>
               <p className="text-sm text-gray-500">{c.body}</p>
@@ -142,13 +153,13 @@ export default function HomePage() {
       {/* ── CTA BANNER ────────────────────────────────────────── */}
       <section className="bg-primary py-14 px-4 text-white text-center">
         <h2 className="text-3xl font-bold mb-3">Ready to Feel Better?</h2>
-        <p className="mb-6 text-sky-100 max-w-md mx-auto">
+        <p className="mb-6 text-amber-100 max-w-md mx-auto">
           Schedule your first consultation with Dr. Tanvi More and take the
           first step toward a pain-free life.
         </p>
         <Link
           href="/contact"
-          className="bg-white text-primary font-bold px-8 py-3 rounded-full hover:bg-sky-50 transition-colors"
+          className="bg-white text-primary font-bold px-8 py-3 rounded-full hover:bg-olive-50 transition-colors"
         >
           Book Now
         </Link>

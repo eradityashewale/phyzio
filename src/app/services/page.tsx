@@ -41,7 +41,7 @@ export default function ServicesPage() {
       {/* ADVANCED TECHNOLOGY */}
       <section className="py-16 px-4 bg-white">
         <Reveal className="max-w-6xl mx-auto mb-10 text-center">
-          <span className="inline-block bg-sky-100 text-sky-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-olive-100 text-olive-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
             Advanced Technology
           </span>
           <h2 className="text-3xl font-bold text-gray-900">Technology-Assisted Treatments</h2>
@@ -64,7 +64,7 @@ export default function ServicesPage() {
       {/* MANUAL & SPECIALIZED THERAPY */}
       <section className="py-16 px-4 bg-sky-50">
         <Reveal className="max-w-6xl mx-auto mb-10 text-center">
-          <span className="inline-block bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
             Manual &amp; Specialized Therapy
           </span>
           <h2 className="text-3xl font-bold text-gray-900">Hands-On Expert Techniques</h2>
@@ -75,7 +75,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {manualModalities.map((s, i) => (
             <Reveal key={s.title} delay={i * 65}
-              className="card-3d border border-teal-100 rounded-2xl p-6 bg-white">
+              className="card-3d border border-amber-100 rounded-2xl p-6 bg-white">
               <div className="text-4xl mb-4">{s.icon}</div>
               <h3 className="font-bold text-gray-800 text-lg mb-2">{s.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
@@ -98,7 +98,7 @@ export default function ServicesPage() {
               <h3 className="font-bold text-gray-800 text-lg mb-3">{s.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {s.tags.map((t) => (
-                  <span key={t} className="bg-sky-50 text-sky-700 text-xs font-medium px-3 py-1 rounded-full">
+                  <span key={t} className="bg-olive-50 text-olive-700 text-xs font-medium px-3 py-1 rounded-full">
                     {t}
                   </span>
                 ))}

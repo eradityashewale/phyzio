@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -27,12 +28,16 @@ export default function Navbar() {
         scrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-primary">
-          Phoenix
-          <span className="block text-xs font-normal text-gray-500 tracking-wide">
-            Dr. Tanvi More | Physiotherapy Clinic
-          </span>
+      <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Phoenix | The Physiotherapy Clinic"
+            width={1200}
+            height={1000}
+            className="h-28 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

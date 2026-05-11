@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 
@@ -35,8 +36,15 @@ export default function AboutPage() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <Reveal className="flex-shrink-0 flex justify-center" delay={0}>
-            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-sky-200 to-teal-200 flex items-center justify-center text-7xl shadow-xl">
-              👩‍⚕️
+            <div className="w-64 h-64 rounded-full overflow-hidden shadow-xl ring-4 ring-olive-200">
+              <Image
+                src="/dr-tanvi.jpg"
+                alt="Dr. Tanvi More"
+                width={256}
+                height={256}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
             </div>
           </Reveal>
           <Reveal delay={150}>
@@ -59,7 +67,7 @@ export default function AboutPage() {
       </section>
 
       {/* CREDENTIALS */}
-      <section className="bg-sky-50 py-14 px-4">
+      <section className="bg-olive-50 py-14 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900">Qualifications &amp; Credentials</h2>
@@ -85,7 +93,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {clinicalExperience.map((exp, i) => (
               <Reveal key={exp.place} delay={i * 70}
-                className="card-3d flex items-start gap-4 bg-white border border-sky-100 rounded-2xl p-5">
+                className="card-3d flex items-start gap-4 bg-white border border-olive-100 rounded-2xl p-5">
                 <span className="text-2xl mt-0.5">🏥</span>
                 <div>
                   <h3 className="font-semibold text-gray-800">{exp.place}</h3>
@@ -98,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="bg-sky-50 py-16 px-4">
+      <section className="bg-olive-50 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <Reveal className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900">Our Core Values</h2>
@@ -106,7 +114,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 110}
-                className="card-3d border border-sky-100 bg-white rounded-2xl p-8 text-center">
+                className="card-3d border border-olive-100 bg-white rounded-2xl p-8 text-center">
                 <div className="text-4xl mb-4">{v.icon}</div>
                 <h3 className="font-semibold text-gray-800 mb-2">{v.title}</h3>
                 <p className="text-sm text-gray-500">{v.desc}</p>

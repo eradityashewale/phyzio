@@ -79,11 +79,11 @@ html {
 @keyframes spinePulse {
   0%, 100% {
     opacity: 0.5;
-    filter: drop-shadow(0 0 2px rgba(14, 165, 233, 0.45));
+    filter: drop-shadow(0 0 2px rgba(139, 130, 53, 0.45));
   }
   50% {
     opacity: 1;
-    filter: drop-shadow(0 0 9px rgba(14, 165, 233, 1));
+    filter: drop-shadow(0 0 9px rgba(139, 130, 53, 1));
   }
 }
 
@@ -124,5 +124,5 @@ html {
 }
 .card-3d:hover {
   transform: perspective(800px) rotateX(-6deg) translateY(-8px);
-  box-shadow: 0 24px 48px rgba(14, 165, 233, 0.18);
+  box-shadow: 0 24px 48px rgba(139, 130, 53, 0.18);
 }
