@@ -9,6 +9,7 @@ const technologyModalities = [
   { icon: "🫁", title: "Pneumatic Compression",      desc: "Sequential compression for lymphedema management, swelling reduction, and circulation improvement." },
   { icon: "⚡", title: "TENS, IFT & Russian Currents", desc: "Electrotherapy modalities for pain management, muscle stimulation, and neuromuscular re-education." },
   { icon: "🧲", title: "Electro-needling",           desc: "Combining electrical stimulation with dry needling for enhanced trigger point release and pain relief." },
+  { icon: "🤖", title: "Robotic-Assisted Therapy",  desc: "Advanced robotic systems for precise, repetitive movement training — accelerating neurological and musculoskeletal rehabilitation outcomes." },
 ];
 
 const manualModalities = [
@@ -21,12 +22,12 @@ const manualModalities = [
 ];
 
 const conditions = [
-  { icon: "⚽", title: "Sports Injury Rehabilitation",  tags: ["Ankle Sprain", "ACL Rehab", "Shoulder Impingement"] },
-  { icon: "🦴", title: "Back & Neck Pain",               tags: ["Lower Back Pain", "Sciatica", "Neck Stiffness"] },
-  { icon: "🏥", title: "Post-Surgical Rehabilitation",   tags: ["Knee Replacement", "Hip Surgery", "Rotator Cuff"] },
-  { icon: "🧠", title: "Neurological Rehabilitation",    tags: ["Stroke Rehab", "Parkinson's", "Balance Training"] },
-  { icon: "🤰", title: "Women's Health Physiotherapy",   tags: ["Prenatal Care", "Pelvic Floor", "Postpartum"] },
-  { icon: "👴", title: "Geriatric Physiotherapy",        tags: ["Fall Prevention", "Osteoporosis", "Mobility"] },
+  { icon: "⚽", title: "Sports Injury Rehabilitation",  tags: ["ACL Tear", "Meniscus Tear", "Runner's Knee", "Tennis/Golfer's Elbow", "Rotator Cuff Tear", "Shin Splints", "Stress Fractures", "Concussion", "Achilles Tendonitis", "Plantar Fasciitis", "Shoulder Dislocation", "Turf Toe", "Bursitis"] },
+  { icon: "🦴", title: "Back & Neck Pain",               tags: ["Herniated Disc", "Sciatica", "Spondylosis (Cervical/Lumbar)", "Spondylolisthesis", "Spinal Stenosis", "Ankylosing Spondylitis", "Scoliosis", "Kyphosis", "Lordosis", "Facet Joint Syndrome", "Sacroiliac (SI) Joint Dysfunction", "Degenerative Disc Disease", "Whiplash Injury", "Mechanical Low Back Pain", "Cervicogenic Headaches", "Post-Surgical Rehab (Laminectomy/Fusion)", "Spinal Compression Fractures"] },
+  { icon: "🏥", title: "Post-Surgical Rehabilitation",   tags: ["Total Knee Replacement", "Total Hip Replacement", "Anterior Cruciate Ligament (ACL) Reconstruction", "Rotator Cuff Repair", "Lumbar Discectomy", "Spinal Fusion", "Meniscectomy", "Achilles Tendon Repair", "Post-Mastectomy Lymphedema", "Cardiac Bypass (CABG) Recovery", "Abdominal Wall Reconstruction", "Fracture Internal Fixation (ORIF)", "Carpal Tunnel Release", "Amputation (Prosthetic Training)", "Tendon Transfer Recovery"] },
+  { icon: "🧠", title: "Neurological Rehabilitation",    tags: ["Bell's Palsy", "Guillain-Barré Syndrome (GBS)", "Benign Paroxysmal Positional Vertigo (BPPV)", "Stroke (Cerebrovascular Accident)", "Parkinson's Disease", "Multiple Sclerosis", "Spinal Cord Injury", "Traumatic Brain Injury (TBI)", "Cerebral Palsy", "Peripheral Nerve Injuries (e.g., Carpal Tunnel, Radial Nerve Palsy)", "Motor Neuron Disease (ALS)", "Ataxia", "Transverse Myelitis", "Diabetic Neuropathy", "Post-Polio Syndrome"] },
+  { icon: "🤰", title: "Women's Health Physiotherapy",   tags: ["Urge Incontinence", "Pelvic Organ Prolapse", "Diastasis Recti Abdominis", "Pelvic Girdle Pain", "Pubic Symphysis Dysfunction", "Dyspareunia", "Vaginismus", "Vulvodynia", "Coccydynia", "Endometriosis-related Pelvic Pain", "Dysmenorrhea", "Chronic Pelvic Pain Syndrome", "Lymphedema (Post-Mastectomy)", "Post-Natal Core Weakness"] },
+  { icon: "👴", title: "Geriatric Physiotherapy",        tags: ["Sarcopenia", "Benign Paroxysmal Positional Vertigo (BPPV)", "Deconditioning", "Post-Operative Hip Fractures", "Osteoarthritis-Related Joint Stiffness", "Balance Impairment and Fall Risk", "Osteoporosis-Related Postural Kyphosis", "Spinal Stenosis", "Urinary Incontinence", "Frozen Shoulder (Adhesive Capsulitis)", "Pressure Sores", "Gait Disorders", "Chronic Obstructive Pulmonary Disease (COPD) Mobility", "Cervical Spondylosis", "Contractures"] },
 ];
 
 export default function ServicesPage() {

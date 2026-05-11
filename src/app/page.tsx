@@ -44,13 +44,13 @@ export default function HomePage() {
               Phoenix | The Physiotherapy Clinic
             </span>
             <h1 className="hero-s2 text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
-              Movement is Life. <br />
-              <span className="text-primary">Restore Yours.</span>
+              Your Recovery <br />
+              <span className="text-primary">Starts Here.</span>
             </h1>
             <p className="hero-s3 text-gray-600 text-lg mb-8 max-w-lg">
-              Advanced physiotherapy care tailored to your recovery. Led by{" "}
-              <strong>Dr. Tanvi More (PT)</strong>, we combine technology with
-              hands-on expertise to help you return to your peak performance.
+              Personalised physiotherapy care led by{" "}
+              <strong>Dr. Tanvi More (PT)</strong>. From injury to peak
+              performance — we&apos;re with you every step of the way.
             </p>
             <div className="hero-s4 flex gap-4 flex-wrap">
               <Link

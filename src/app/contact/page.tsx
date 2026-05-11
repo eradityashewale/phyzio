@@ -4,8 +4,8 @@ import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 
 const info = [
-  { icon: "📍", label: "Address",   value: "Malegaon, Maharashtra" },
-  { icon: "📞", label: "Phone",     value: "8381025680" },
+  { icon: "📍", label: "Address",   value: "HGC5+V2C, Camp, Malegaon, Maharashtra 423105" },
+  { icon: "📞", label: "Phone",     value: "9975849327" },
   { icon: "📸", label: "Instagram", value: "@phyzio.warrior" },
   { icon: "🕐", label: "Hours",     value: "Mon – Sat: 10:00 AM – 8:00 PM" },
 ];
@@ -49,8 +49,16 @@ export default function ContactPage() {
                 </Reveal>
               ))}
             </div>
-            <div className="mt-8 rounded-2xl bg-gradient-to-br from-sky-100 to-teal-100 h-52 flex items-center justify-center text-gray-400 text-sm font-medium border border-sky-200">
-              📍 Map placeholder — replace with Google Maps embed
+            <div className="mt-8 rounded-2xl overflow-hidden border border-sky-200 h-52">
+              <iframe
+                src="https://maps.google.com/maps?q=HGC5%2BV2C,+Camp,+Malegaon,+Maharashtra+423105&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </Reveal>
 
