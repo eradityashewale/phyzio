@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 
 const info = [
   { icon: "📍", label: "Address",   value: "Malegaon, Maharashtra" },
-  { icon: "📞", label: "Phone",     value: "[Contact Number]" },
+  { icon: "📞", label: "Phone",     value: "8381025680" },
   { icon: "📸", label: "Instagram", value: "@phyzio.warrior" },
   { icon: "🕐", label: "Hours",     value: "Mon – Sat: 10:00 AM – 8:00 PM" },
 ];
