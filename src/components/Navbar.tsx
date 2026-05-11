@@ -1,19 +1,32 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/",        label: "Home" },
+  { href: "/about",   label: "About" },
+  { href: "/services",label: "Services" },
   { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header
+      className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
+        scrolled ? "shadow-md" : "shadow-sm"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-primary">
           Phoenix
@@ -28,7 +41,11 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+              className={`relative text-sm font-medium transition-colors pb-0.5 ${
+                pathname === l.href
+                  ? "text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"
+                  : "text-gray-600 hover:text-primary"
+              }`}
             >
               {l.label}
             </Link>
@@ -65,7 +82,9 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-sm font-medium text-gray-600 hover:text-primary py-1"
+              className={`text-sm font-medium py-1 transition-colors ${
+                pathname === l.href ? "text-primary font-semibold" : "text-gray-600 hover:text-primary"
+              }`}
             >
               {l.label}
             </Link>
