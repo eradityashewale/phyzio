@@ -9,7 +9,7 @@ const highlights = [
   { icon: "🏆", count: 2500, countSuffix: "+", label: "Patients Treated",    desc: "Proven results across complex orthopedic and neurological cases." },
   { icon: "⚡", count: 12,   countSuffix: "+", label: "Modern Modalities",   desc: "Access to the latest recovery tech like Shockwave and Laser therapy." },
   { icon: "❤️", count: 98,   countSuffix: "%", label: "Patient Satisfaction", desc: "We don't just treat the pain — we treat the whole person." },
-  { icon: "📍", count: 8,    countSuffix: "+", label: "Years of Service",     desc: "Conveniently serving Malegaon and surrounding communities." },
+  { icon: "📍", count: 2,    countSuffix: "+", label: "Years of Service",     desc: "Conveniently serving Malegaon and surrounding communities." },
 ];
 
 const services = [
